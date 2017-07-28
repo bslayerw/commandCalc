@@ -35,6 +35,7 @@ npm test
 - [babel-cli](https://github.com/babel/babel/tree/master/packages): Babel command line.
 - [babel-preset-env](https://github.com/babel/babel-preset-env): A Babel preset for each environment.
 - [chai](https://github.com/chaijs/chai): BDD/TDD assertion library for node.js and the browser. Test framework agnostic.
+- [coveralls](https://github.com/nickmerwin/node-coveralls): takes json-cov output into stdin and POSTs to coveralls.io
 - [eslint](https://github.com/eslint/eslint): An AST-based pattern checker for JavaScript.
 - [mocha](https://github.com/mochajs/mocha): simple, flexible, fun test framework
 - [standard](https://github.com/feross/standard): JavaScript Standard Style
