@@ -4,7 +4,7 @@ const chalk = require('chalk')
 const clear = require('clear')
 const figlet = require('figlet')
 
-const Calculator = require('../lib/Calculator')
+const Calculator = require('../lib/calculator')
 const calc = new Calculator.Calculator()
 const factorialCommand = new Calculator.FactorialCommand(calc)
 const addCommand = new Calculator.AdditionCommand(calc)

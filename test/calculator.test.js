@@ -3,7 +3,7 @@ const chai = require('chai')
 const chalk = require('chalk')
 const figlet = require('figlet')
 
-const Calculator = require('../lib/Calculator')
+const Calculator = require('../lib/calculator')
 const Calc = new Calculator.Calculator()
 
 describe('Calculator', function () {
