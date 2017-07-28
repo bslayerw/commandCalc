@@ -11,8 +11,10 @@
     "url": "https://github.com/bslayerw/commandCalc.git"
   },
   "scripts": {
-    "test": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec test/**/*",
+    "test": "node_modules/mocha/bin/_mocha -- -R spec test/**/*",
     "test:coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec test/**/*",
+    "test:coverall": "npm run test:coverage -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
+    "test.windows:coverall": "npm run test:coverage -- --report lcovonly && type ./coverage/lcov.info | coveralls",
     "fulltest": "standard && mocha",
     "lint": "standard --fix",
     "start": "node ./cli.js"
@@ -39,11 +41,14 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-plugin-istanbul": "^4.1.4",
     "babel-preset-env": "^1.6.0",
     "chai": "4.0.2",
     "coveralls": "^2.13.1",
     "eslint": "^4.3.0",
+    "istanbul": "^0.4.5",
     "mocha": "3.4.2",
+    "mocha-lcov-reporter": "^1.3.0",
     "standard": "^10.0.2"
   }
 }
