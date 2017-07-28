@@ -11,7 +11,7 @@
     "url": "https://github.com/bslayerw/commandCalc.git"
   },
   "scripts": {
-    "test": "node_modules/mocha/bin/_mocha -- -R spec test/**/*",
+    "test": "node_modules/mocha/bin/mocha -- -R spec test/**/*",
     "test:coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec test/**/*",
     "test:coverall": "npm run test:coverage -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "test.windows:coverall": "npm run test:coverage -- --report lcovonly && type ./coverage/lcov.info | coveralls",
