@@ -5,18 +5,25 @@
 
 ## Command Line Calculator (Can't think of a fancier name and it probably doesn't matter :) )
 Node.js command line interface that can evaluate mathematical expressions using a deriviate of the shunting-yard algorithm. This was done as an exercise and is only meant as an example.
+
+## Prerequisites
+[Node.js](https://nodejs.org/en/) - Testing only on v8.0.0+
+
 ## Installation
 
 ```sh
-npm install cmdcalc --save
+git clone https://github.com/bslayerw/commandCalc.git
+cd commandCalc
+npm install
 ```
 
 
 ## Tests
 
 ```sh
-npm install
 npm test
+# run code coverage local and generate html in ./coverage
+npm run test:coverage
 ```
 
 ## Run Interactive Shell
