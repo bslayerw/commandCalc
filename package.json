@@ -14,6 +14,7 @@
     "test": "mocha test/**/*",
     "test:coverage": "istanbul cover node_modules/mocha/bin/_mocha  test/**/*",
     "test:coverall": "npm run test:coverage -- --report lcovonly && type ./coverage/lcov.info | coveralls",
+    "travis:coverall": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "test.windows:coverall": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && type ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "fulltest": "standard && mocha",
     "lint": "standard --fix",
