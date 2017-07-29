@@ -10,9 +10,11 @@ const factorialCommand = new Calculator.FactorialCommand(calc)
 const addCommand = new Calculator.AdditionCommand(calc)
 const subtractCommand = new Calculator.SubtractionCommand(calc)
 const powCommand = new Calculator.PowCommand(calc)
+const oneDivCommand = new Calculator.OneDividedByX(calc)
+const clearAllCommand = new Calculator.ClearAllCommand(calc)
+
 describe('Calculator', function () {
   before(function () {
-    // clear()
     console.log(
       chalk.yellow(
         figlet.textSync('Calculator Command - Unit Test', {
@@ -20,12 +22,6 @@ describe('Calculator', function () {
         })
       )
     )
-  })
-  describe('#FactorialCommand execute', function () {
-    const expression = 5
-    it(`should return 4. Testing addition:${expression} = 120`, function () {
-      assert.equal(120, factorialCommand.execute(expression))
-    })
   })
   describe('#addCommand execute', function () {
     const operandA = 2
@@ -39,20 +35,32 @@ describe('Calculator', function () {
     const operandA = 2
     const operandB = 2
 
-    it(`should return 4. Testing addition:${operandA}-${operandB} = 0`, function () {
+    it(`should return 4. Testing subtract:${operandA}-${operandB} = 0`, function () {
       assert.equal(0, subtractCommand.execute(operandA, operandB))
     })
   })
   describe('#FactorialCommand execute', function () {
     const expression = 5
-    it(`should return 4. Testing addition:${expression} = 120`, function () {
+    it(`should return 4. Testing factorial:${expression} = 120`, function () {
       assert.equal(120, factorialCommand.execute(expression))
     })
   })
   describe('#PowCommand execute', function () {
     const expression = 5
-    it(`should return 25. Testing addition:pow(${expression}) = 25`, function () {
+    it(`should return 25. Testing pow(${expression}) = 25`, function () {
       assert.equal(25, powCommand.execute(expression))
     })
   })
+  describe('#OneDivXCommand execute', function () {
+    const expression = 0.5
+    it(`should return 25. Testing oneDivCommand(${expression}) = 2`, function () {
+      assert.equal(2, oneDivCommand.execute(expression))
+    })
+  }) //
+  /*describe('#OneDivXCommand execute', function () {
+    const expression = '5+ (-5) A + 9'.split('')
+    it(`should return 25. Testing oneDivCommand(${expression}) = 9`, function () {
+      assert.equal('+ 9', clearAllCommand.execute(expression))
+    })
+  })*/
 })

@@ -30,7 +30,7 @@ program.on('--help', function () {
   console.log('')
 })
 
-const calculator = new Calculator()
+const calculator = new Calculator.Calculator()
 
 let questions = [
   {
@@ -44,17 +44,24 @@ let expressionBuffer = ''
 
 var evaluator = Promise.method(function () {
   return inquirer.prompt(questions).then(function (answer) {
-    console.log(`answer = ${answer}`)
     if (answer.expression_to_eval.indexOf('Q') !== -1) {
       return {shouldQuit: true, evaluatedExpression: ''}
     }
-    if (answer.expression_to_eval.indexOf('=') !== -1) {
+    if (answer.expression_to_eval.indexOf('=') === -1) {
       // append to the expression buffer instead of evaluting. Only evaluate when have the entire expression
       expressionBuffer += answer.expression_to_eval
       return {shouldQuit: false, evaluatedExpression: expressionBuffer}
     }
-    const evaled = calculator.evaluate(answer.expression_to_eval)
-    console.log(`answer ${evaled}`)
+    // account for empty expresion buffer
+    if (expressionBuffer === '') {
+      expressionBuffer = answer.expression_to_eval
+    }
+    // strip '='
+    const exp = expressionBuffer.split('=')[0]
+
+    const evaled = calculator.evaluate(exp)
+    expressionBuffer = ''
+    console.log(chalk.green(`answer = ${evaled}`))
     return {shouldQuit: false, evaluatedExpression: evaled}
   })
 })
@@ -63,12 +70,10 @@ function main () {
   return evaluator().then(function (result) {
     return result.shouldQuit ? result.evaluatedExpression : main()
   }).catch(function (err) {
-    console.error(chalk.red(`somthing went wrong with input ${chalk.underline.bold.red(err)} !`))
-
+    expressionBuffer = ''
+    console.error(chalk.red(`input error: ${chalk.underline.bold.red(err)} !`))
     return main()
   })
 }
 
-main().then(function (data) {
-  console.log(data)
-})
+main().then(function (_) {})

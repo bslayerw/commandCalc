@@ -33,11 +33,14 @@ npm test
 ## Dev Dependencies
 
 - [babel-cli](https://github.com/babel/babel/tree/master/packages): Babel command line.
+- [babel-plugin-istanbul](https://github.com/istanbuljs/babel-plugin-istanbul): A babel plugin that adds istanbul instrumentation to ES6 code
 - [babel-preset-env](https://github.com/babel/babel-preset-env): A Babel preset for each environment.
 - [chai](https://github.com/chaijs/chai): BDD/TDD assertion library for node.js and the browser. Test framework agnostic.
 - [coveralls](https://github.com/nickmerwin/node-coveralls): takes json-cov output into stdin and POSTs to coveralls.io
 - [eslint](https://github.com/eslint/eslint): An AST-based pattern checker for JavaScript.
+- [istanbul](https://github.com/gotwarlost/istanbul): Yet another JS code coverage tool that computes statement, line, function and branch coverage with module loader hooks to transparently add coverage when running tests. Supports all JS coverage use cases including unit tests, server side functional tests and browser tests. Built for scale
 - [mocha](https://github.com/mochajs/mocha): simple, flexible, fun test framework
+- [mocha-lcov-reporter](https://github.com/StevenLooman/mocha-lcov-reporter): LCOV reporter for Mocha
 - [standard](https://github.com/feross/standard): JavaScript Standard Style
 
 
