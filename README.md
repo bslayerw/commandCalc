@@ -1,4 +1,5 @@
-# cmdcalc [![Build Status](https://travis-ci.org/bslayerw/commandCalc.png?branch=master)](https://travis-ci.org/bslayerw/commandCalc)
+# cmdcalc [![Build Status](https://travis-ci.org/bslayerw/commandCalc.png?branch=master)](https://travis-ci.org/bslayerw/commandCalc)[![Coverage Status](https://coveralls.io/repos/github/bslayerw/commandCalc/badge.svg?branch=master)](https://coveralls.io/github/bslayerw/commandCalc?branch=master)
+
 
 Command Line Calculator
 
@@ -14,6 +15,12 @@ npm install cmdcalc --save
 ```sh
 npm install
 npm test
+```
+
+## Run Interactive Shell
+
+```sh
+npm start
 ```
 
 ## Dependencies

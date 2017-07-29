@@ -7,15 +7,6 @@ const Calculator = require('../lib/calculator')
 const Calc = new Calculator.Calculator()
 
 describe('Calculator', function () {
-  before(function () {
-    console.log(
-      chalk.yellow(
-        figlet.textSync('Cmd Calculator - Unit Test', {
-          horizontalLayout: 'full'
-        })
-      )
-    )
-  })
   describe('#evaluate', function () {
     const expression = '2+2'
     it(`should return 4. Testing addition:${expression} = 4`, function () {
@@ -40,7 +31,7 @@ describe('Calculator', function () {
       assert.equal(2, Calc.evaluate(expression))
     })
   })
-  /*describe('#evaluate', function () {
+  /* describe('#evaluate', function () {
     const expression = '(-(1+1)) * 10'
     it(`should return -20. Testing addition and multiplication with parenthese order precedences:  ${expression} = -20`, function () {
       assert.equal(-20, Calc.evaluate(expression))

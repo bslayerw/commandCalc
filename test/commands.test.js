@@ -14,15 +14,6 @@ const oneDivCommand = new Calculator.OneDividedByX(calc)
 const clearAllCommand = new Calculator.ClearAllCommand(calc)
 
 describe('Calculator', function () {
-  before(function () {
-    console.log(
-      chalk.yellow(
-        figlet.textSync('Calculator Command - Unit Test', {
-          horizontalLayout: 'default'
-        })
-      )
-    )
-  })
   describe('#addCommand execute', function () {
     const operandA = 2
     const operandB = 2
