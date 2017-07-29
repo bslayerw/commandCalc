@@ -1,8 +1,8 @@
-# cmdcalc [![Build Status](https://travis-ci.org/bslayerw/commandCalc.png?branch=master)](https://travis-ci.org/bslayerw/commandCalc)[![Coverage Status](https://coveralls.io/repos/github/bslayerw/commandCalc/badge.svg?branch=master)](https://coveralls.io/github/bslayerw/commandCalc?branch=master)
+# cmdcalc [![Build Status](https://travis-ci.org/bslayerw/commandCalc.png?branch=master)](https://travis-ci.org/bslayerw/commandCalc)[![Coverage Status](https://coveralls.io/repos/github/bslayerw/commandCalc/badge.svg?branch=master)](https://coveralls.io/github/bslayerw/commandCalc?branch=master)![Greenkeeper Status](https://badges.greenkeeper.io/bslayerw/COMMANDCALC.svg?style=flat-square)
 
 
-Command Line Calculator
-
+## Command Line Calculator (Can't think of a fancier name and it probably doesn't matter :) )
+Node.js command line interface that can evaluate mathematical expressions using a deriviate of the shunting-yard algorithm. This was done as an exercise and is only meant as an example.
 ## Installation
 
 ```sh
@@ -51,6 +51,9 @@ npm start
 - [standard](https://github.com/feross/standard): JavaScript Standard Style
 
 
+## Additional Resources
+- Shunting-yard algorithm [Wikipedia](https://en.wikipedia.org/wiki/Shunting-yard_algorithm)
+- Reference for Order of operator: [Wikipedia](https://en.wikipedia.org/wiki/Order_of_operations)
 ## License
 
 MIT
