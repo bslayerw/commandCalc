@@ -1,5 +1,7 @@
 # cmdcalc [![Build Status](https://travis-ci.org/bslayerw/commandCalc.png?branch=master)](https://travis-ci.org/bslayerw/commandCalc)[![Coverage Status](https://coveralls.io/repos/github/bslayerw/commandCalc/badge.svg?branch=master)](https://coveralls.io/github/bslayerw/commandCalc?branch=master)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bslayerw/commandCalc.svg)](https://greenkeeper.io/)
+
 
 Command Line Calculator
 
