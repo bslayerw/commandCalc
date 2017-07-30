@@ -1,7 +1,5 @@
 # cmdcalc [![Build Status](https://travis-ci.org/bslayerw/commandCalc.png?branch=master)](https://travis-ci.org/bslayerw/commandCalc)[![Coverage Status](https://coveralls.io/repos/github/bslayerw/commandCalc/badge.svg?branch=master)](https://coveralls.io/github/bslayerw/commandCalc?branch=master)![Greenkeeper Status](https://badges.greenkeeper.io/bslayerw/COMMANDCALC.svg?style=flat-square)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/bslayerw/commandCalc.svg)](https://greenkeeper.io/)
-
 
 ## Command Line Calculator (Can't think of a fancier name and it probably doesn't matter :) )
 Node.js command line interface that can evaluate mathematical expressions using a deriviate of the shunting-yard algorithm. This was done as an exercise and is only meant as an example.
