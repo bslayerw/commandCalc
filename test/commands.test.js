@@ -1,9 +1,5 @@
+/* eslint-env node, mocha */
 const assert = require('assert')
-const chai = require('chai')
-const chalk = require('chalk')
-const clear = require('clear')
-const figlet = require('figlet')
-
 const Calculator = require('../lib/calculator')
 const calc = new Calculator.Calculator()
 const factorialCommand = new Calculator.FactorialCommand(calc)
@@ -48,10 +44,12 @@ describe('Calculator', function () {
       assert.equal(2, oneDivCommand.execute(expression))
     })
   }) //
-  /*describe('#OneDivXCommand execute', function () {
-    const expression = '5+ (-5) A + 9'.split('')
-    it(`should return 25. Testing oneDivCommand(${expression}) = 9`, function () {
-      assert.equal('+ 9', clearAllCommand.execute(expression))
+  describe('#ClearCommand execute', function () {
+    // '5+ (-5) A + 9'
+    let expression = ['5', '+', '(', '5', ')', 'A', '+', '9']
+    it(`should return 25. Testing oneDivCommand(${JSON.stringify(expression)}) = '+ 9'`, function () {
+      const result = clearAllCommand.execute(expression)
+      assert.equal(result, '')
     })
-  })*/
+  })
 })

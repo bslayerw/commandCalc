@@ -1,7 +1,6 @@
+/* eslint-env node, mocha */
 const assert = require('assert')
 const chai = require('chai')
-const chalk = require('chalk')
-const figlet = require('figlet')
 
 const Calculator = require('../lib/calculator')
 const Calc = new Calculator.Calculator()
@@ -13,30 +12,25 @@ describe('Calculator', function () {
       assert.equal(4, Calc.evaluate(expression))
     })
   })
-  /* describe('#evaluate', function () {
+  describe('#evaluate', function () {
     const expression = '-5*5/3'
-    it(`should return -8.333333333333334. Testing addition:${expression} = -8.333333333333334`, function () {
-      // because it's recuring, convert to 5 fixed decial places for testing
-
+    it(`should return -8.333333. Testing addition:${expression} = -8.333333`, function () {
       const result = Calc.evaluate(expression)
-      console.log(`close to ??? ${result} ${result.toPrecision(7)}`)
-      // chai.expect(Calc.evaluate(expression)).to.be.closeTo(0, 0.00000001)
-      // assert.almostEqual(-8.333333333333334, Calc.evaluate(expression), 2);
-      assert.equal(8.3333333, result.toPrecision(7))
+      assert.equal(-8.333333333333334, result)
     })
-  }) */
+  })
   describe('#evaluate', function () {
     const expression = '1+1'
     it(`should return 2. Testing addition:${expression} = 2`, function () {
       assert.equal(2, Calc.evaluate(expression))
     })
   })
-  /* describe('#evaluate', function () {
+  describe('#evaluate', function () {
     const expression = '(-(1+1)) * 10'
     it(`should return -20. Testing addition and multiplication with parenthese order precedences:  ${expression} = -20`, function () {
       assert.equal(-20, Calc.evaluate(expression))
     })
-  }) */
+  })
   describe('#evaluate', function () {
     const expression = '0.5 * 2'
     it(`should return 1.  Testing multiplication: ${expression} = 1`, function () {
@@ -50,7 +44,6 @@ describe('Calculator', function () {
       chai.expect(() => Calc.evaluate(expression)).to.throw(`invalid input '${expression}'`)
     })
   })
-
   describe('#evaluate', function () {
     const expression = '55+5'
     it(`should return 60.  Testing addition: ${expression}`, function () {
