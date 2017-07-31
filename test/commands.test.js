@@ -1,13 +1,14 @@
 /* eslint-env node, mocha */
 const assert = require('assert')
 const Calculator = require('../lib/calculator')
+const commands = require('../lib/commands')
 const calc = new Calculator.Calculator()
-const factorialCommand = new Calculator.FactorialCommand(calc)
-const addCommand = new Calculator.AdditionCommand(calc)
-const subtractCommand = new Calculator.SubtractionCommand(calc)
-const powCommand = new Calculator.PowCommand(calc)
-const oneDivCommand = new Calculator.OneDividedByX(calc)
-const clearAllCommand = new Calculator.ClearAllCommand(calc)
+const factorialCommand = new commands.FactorialCommand(calc)
+const addCommand = new commands.AdditionCommand(calc)
+const subtractCommand = new commands.SubtractionCommand(calc)
+const powCommand = new commands.PowCommand(calc)
+const oneDivCommand = new commands.OneDividedByX(calc)
+const clearAllCommand = new commands.ClearAllCommand(calc)
 
 describe('Calculator', function () {
   describe('#addCommand execute', function () {

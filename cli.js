@@ -61,6 +61,7 @@ var evaluator = Promise.method(function () {
 
     const evaled = calculator.evaluate(exp)
     expressionBuffer = ''
+    console.log(chalk.blue(`in memory = ${calculator.getMemory()}`))
     console.log(chalk.green(`answer = ${evaled}`))
     return {shouldQuit: false, evaluatedExpression: evaled}
   })

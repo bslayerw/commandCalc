@@ -2,7 +2,7 @@
 
 
 ## Command Line Calculator (Can't think of a fancier name and it probably doesn't matter :) )
-Node.js command line interface that can evaluate mathematical expressions using a deriviate of the shunting-yard algorithm. This was done as an exercise and is only meant as an example.
+Node.js command line interface that can evaluate mathematical expressions using a deriviate of the shunting-yard algorithm. This was done as an exercise and is only meant as an example. It's been a long while since I've programmed in JavaScript. A lot has changed. Feedback welcome!
 
 ## Prerequisites
 [Node.js](https://nodejs.org/en/) - Testing only on v8.0.0+
@@ -57,8 +57,14 @@ npm start
 - [mocha-lcov-reporter](https://github.com/StevenLooman/mocha-lcov-reporter): LCOV reporter for Mocha
 - [standard](https://github.com/feross/standard): JavaScript Standard Style
 
+## External Resources
+- [Travis-CI](https://travis-ci.org) for continuous integration. Project link : [here](https://travis-ci.org/bslayerw/commandCalc) 
+- [Coverall](https://coveralls.io/) for test coverage. Project link: [here](https://coveralls.io/github/bslayerw/commandCalc)
+- [LICEcap](https://www.cockos.com/licecap/) for screen capture -> gif
+- [VSCode](https://code.visualstudio.com/) is current my go to editor.
+- [Node.js](https://nodejs.org/en/)
 
-## Additional Resources
+## References
 - Shunting-yard algorithm [Wikipedia](https://en.wikipedia.org/wiki/Shunting-yard_algorithm)
 - Reference for Order of operator: [Wikipedia](https://en.wikipedia.org/wiki/Order_of_operations)
 ## License
