@@ -11,6 +11,7 @@ const oneDivCommand = new commands.OneDividedByX(calc)
 const clearAllCommand = new commands.ClearAllCommand(calc)
 const negateCommand = new commands.NegateCommand(calc)
 const positiveCommand = new commands.PositiveCommand(calc)
+const clearPreviousCommand = new commands.ClearPreviousCommand(calc)
 
 describe('Calculator', function () {
   describe('#addCommand execute', function () {
@@ -54,6 +55,14 @@ describe('Calculator', function () {
     it(`should return 25. Testing oneDivCommand(${JSON.stringify(expression)}) = '+ 9'`, function () {
       const result = clearAllCommand.execute(expression)
       assert.equal(result, '')
+    })
+  })
+  describe('#clearPrevious execute', function () {
+    // '5+ (-5) A + 9'
+    let expression = ['5', '+', 'C']
+    it(`should return ['5', '+']. Testing clearPrevious(${JSON.stringify(expression)}) = ['5', '+']`, function () {
+      const result = clearPreviousCommand.execute(expression)
+      assert.deepEqual(result, ['5', '+'])
     })
   })
   describe('#NegateCommand execute', function () {
