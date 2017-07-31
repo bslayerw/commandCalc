@@ -9,6 +9,8 @@ const subtractCommand = new commands.SubtractionCommand(calc)
 const powCommand = new commands.PowCommand(calc)
 const oneDivCommand = new commands.OneDividedByX(calc)
 const clearAllCommand = new commands.ClearAllCommand(calc)
+const negateCommand = new commands.NegateCommand(calc)
+const positiveCommand = new commands.PositiveCommand(calc)
 
 describe('Calculator', function () {
   describe('#addCommand execute', function () {
@@ -31,6 +33,7 @@ describe('Calculator', function () {
     const expression = 5
     it(`should return 4. Testing factorial:${expression} = 120`, function () {
       assert.equal(120, factorialCommand.execute(expression))
+      assert.equal(120, factorialCommand.execute(expression))
     })
   })
   describe('#PowCommand execute', function () {
@@ -51,6 +54,22 @@ describe('Calculator', function () {
     it(`should return 25. Testing oneDivCommand(${JSON.stringify(expression)}) = '+ 9'`, function () {
       const result = clearAllCommand.execute(expression)
       assert.equal(result, '')
+    })
+  })
+  describe('#NegateCommand execute', function () {
+    // '5+ (-5) A + 9'
+    let expression = 5
+    it(`should return -5. Testing negateCommand(${JSON.stringify(expression)}) = '- 5'`, function () {
+      const result = negateCommand.execute(expression)
+      assert.equal(-5, result)
+    })
+  })
+  describe('#Positive execute', function () {
+    // '5+ (-5) A + 9'
+    let expression = -5
+    it(`should return +5. Testing positiveCommand(${JSON.stringify(expression)}) = '+ 5'`, function () {
+      const result = positiveCommand.execute(expression)
+      assert.equal(-5, result)
     })
   })
 })

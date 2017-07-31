@@ -137,7 +137,7 @@ describe('Calculator', function () {
       assert.equal(9, Calc.evaluate(expression))
     })
   })
-  /*describe('#evaluate', function () {
+  /* describe('#evaluate', function () {
     const expression = '7 + - 6' //
     it(`Test A expression evaluation should return 1  Testing addition: ${expression}`, function () {
       assert.equal(1, Calc.evaluate(expression))
@@ -151,6 +151,17 @@ describe('Calculator', function () {
       assert.equal(8, result)
       result = Calc.evaluate(expression)
       assert.equal(13, result)
+    })
+  })
+  describe('#getMemory', function () {
+    it('test getting memory from calculator', function () {
+      Calc.clearGlobalMemory()
+      let result = Calc.getMemory()
+      assert.notEqual(null, result)
+      assert.equal(null, result._global_)
+
+      Calc.evaluate('2+2')
+      assert(4, Calc.getGlobalMemory())
     })
   })
 })
