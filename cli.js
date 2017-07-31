@@ -15,6 +15,8 @@ const Promise = require('bluebird')
 const packageInfo = require('./package.json')
 const Calculator = require('./lib/calculator')
 
+const calculator = new Calculator.Calculator()
+
 clear()
 console.log(
   chalk.yellow(figlet.textSync('Cmd Calculator', { horizontalLayout: 'full' }))
@@ -29,8 +31,6 @@ program.on('--help', function () {
   console.log('    $ custom-help -h')
   console.log('')
 })
-
-const calculator = new Calculator.Calculator()
 
 let questions = [
   {

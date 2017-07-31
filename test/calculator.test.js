@@ -84,13 +84,12 @@ describe('Calculator', function () {
       assert.equal(-20, Calc.evaluate(expression))
     })
   })
-
-  /* describe('#evaluate', function () {
+  describe('#evaluate', function () {
     const expression = '3 * -5'
     it(`should return -15.  Testing addition: ${expression}`, function () {
       assert.equal(-15, Calc.evaluate(expression))
     })
-  }) */
+  })
 
   describe('#evaluate', function () {
     const expression = '-5 + (-5)'
@@ -137,12 +136,12 @@ describe('Calculator', function () {
       assert.equal(9, Calc.evaluate(expression))
     })
   })
-  /* describe('#evaluate', function () {
+  describe('#evaluate', function () {
     const expression = '7 + - 6' //
     it(`Test A expression evaluation should return 1  Testing addition: ${expression}`, function () {
       assert.equal(1, Calc.evaluate(expression))
     })
-  }) */
+  })
   describe('#evaluate', function () {
     const initialExpression = '4+4'
     const expression = '+5' //
