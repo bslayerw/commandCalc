@@ -35,7 +35,7 @@
     "cli-table": "^0.3.1",
     "clui": "^0.3.6",
     "commander": "2.20.0",
-    "figlet": "1.2.0",
+    "figlet": "1.2.3",
     "inquirer": "^5.0.0",
     "lodash": "4.17.5",
     "minimist": "1.2.0",
