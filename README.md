@@ -2,7 +2,7 @@
 
 
 ## Command Line Calculator (Can't think of a fancier name and it probably doesn't matter :) )
-Node.js command line interface that can evaluate mathematical expressions using a deriviate of the shunting-yard algorithm. This was done as an exercise and is only meant as an example. It's been a long while since I've programmed in JavaScript. A lot has changed. Feedback welcome!
+Node.js command line interface that can evaluate mathematical expressions using a deriviate of the shunting-yard algorithm. This was done as an exercise and is only meant as an example.
 
 ![CmdCalc](https://github.com/bslayerw/commandCalc/blob/master/assets/cmdcalc.gif)
 ## Prerequisites
